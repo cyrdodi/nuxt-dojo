@@ -1,12 +1,16 @@
 <template>
-  <div>
-    <nav>
+  <div class="shadow-sm">
+    <nav class="container mx-auto p-4 flex justify-between">
       <NuxtLink to="/products">Nuxt Dojo</NuxtLink>
     </nav>
-    <slot />
+  </div>
 
-    <footer>
-      <ul>
+  <div class="container mx-auto p-4">
+    <slot />
+  </div>
+  <div class="border-t">
+    <footer class="container mx-auto p-4">
+      <ul class="flex gap-4">
         <li><NuxtLink to="/">Home</NuxtLink></li>
         <li><NuxtLink to="/about">About</NuxtLink></li>
         <li><NuxtLink to="/products">Product</NuxtLink></li>
