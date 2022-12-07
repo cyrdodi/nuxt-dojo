@@ -10,6 +10,15 @@ const url = "https://fakestoreapi.com/products/" + id;
 
 const { data: product } = await useFetch(url);
 
+// jika product tidak ditemukan maka throw createError method
+if (!product.value) {
+  throw createError({
+    statusCode: 404,
+    statusMessage: "Product not found",
+    fatal: true, // jika fatal = true maka error yang disebabkan dari browser/client akan throw error
+  });
+}
+
 definePageMeta({
   layout: "products",
 });
