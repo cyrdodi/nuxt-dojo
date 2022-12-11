@@ -1,3 +1,5 @@
+import { genPropsAccessExp } from "@vue/shared";
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss'],
@@ -11,5 +13,8 @@ export default defineNuxtConfig({
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' }
       ]
     }
+  },
+  runtimeConfig: {
+    currencyKey: process.env.CURRENCY_API_KEY
   }
 })
